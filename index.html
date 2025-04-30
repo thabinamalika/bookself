@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookshelf Apps</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<script src="main.js"></script>
+<script src="localStorage.js"></script>
+
+<body>
+  <header>
+    <h1>BOOKSELF APP</h1>
+  </header>
+
+  <main>
+    <section id="inputBook">
+      <h2>Masukkan<span> Buku-Buku</span></h2>
+      <form id="bookForm" data-testid="bookForm">
+        <input type="text" id="bookFormTitleInput" placeholder="Judul Buku" data-testid="bookFormTitleInput" required>
+        <input type="text" id="bookFormAuthorInput" placeholder="Penulis" data-testid="bookFormAuthorInput" required>
+        <input type="number" id="bookFormYearInput" placeholder="Tahun Terbit" data-testid="bookFormYearInput" required>
+        <label>
+          <input type="checkbox" id="bookFormIsCompleteCheckbox" data-testid="bookFormIsCompleteCheckbox"> Selesai
+          dibaca
+        </label>
+        <button type="submit" data-testid="bookFormSubmitButton">Masukkan buku ke dalam rak</button>
+      </form>
+    </section>
+
+    <form id="searchBookForm" data-testid="searchBookForm">
+      <input type="text" id="searchBookTitle" placeholder="Cari buku berdasarkan judul..."
+        data-testid="searchBookFormTitleInput">
+      <button type="submit" data-testid="searchBookFormSubmitButton">Cari</button>
+    </form>
+
+    <section id="book-list">
+      <h2>Belum Selesai Dibaca</h2>
+      <div id="incompleteBookList" data-testid="incompleteBookList"></div>
+
+      <h2>Sudah Selesai Dibaca</h2>
+      <div id="completeBookList" data-testid="completeBookList"></div>
+    </section>
+  </main>
+</body>
+
+</html>
